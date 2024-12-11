@@ -16,7 +16,7 @@ n = n / 10;
 }
 if (arg == sum)
 {
-System.out.println("Given number is armstrong number: " + arg);
+System.out.println("Given Number is armstrong number: " + arg);
 }
 else
 {
