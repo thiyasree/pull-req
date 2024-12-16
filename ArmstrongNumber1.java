@@ -1,26 +1,23 @@
-public class ArmstrongNumber
+class PrimeNumbers 
 {
-public static void main(String args[])
+public static void main(String[] args) 
 {
-int n, arg, sum = 0, r;
-n = 153; // input value
-arg = n;
-for (int i = 1; i < n; i++)
+int limit = 100;
+System.out.println("Prime numbers between 1 and " + limit);
+for(int i=1; i < 100; i++)
 {
-while (n > 0)
+boolean isPrime = true;
+for(int j=2; j < i ; j++)
 {
-r = n % 10;
-sum = sum + (r * r * r);
-n = n / 10;
+if(i % j == 0)
+{
+isPrime = false;
+break;
 }
 }
-if (arg == sum)
-{
-System.out.println("Given Number is armstrong number: " + arg);
-}
-else
-{
-System.out.println("Given number is not armstrong number: " + arg);
+if(isPrime)
+System.out.print(i + " ");
 }
 }
 }
+
